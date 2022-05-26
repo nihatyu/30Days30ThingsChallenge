@@ -57,33 +57,33 @@ const people = [
   "Biondo, Frank",
 ];
 
-//filter function
+//filter function JSON Array döndürür
 const fifteen = inventors.filter(
   (inventor) => inventor.year >= 1500 && inventor.year < 1600
 );
 
 console.table(fifteen);
 
-//map function
+//map function Array döndürür
 const fullNames = inventors.map(
   (inventor) => `${inventor.first} ${inventor.last}`
 );
 
 console.log(fullNames);
 
-//sort function
+//sort function JSON Array döndürür
 const ordered = inventors.sort((a, b) => (a.year > b.year ? 1 : -1));
 
 console.table(ordered);
 
-//reduce function
+//reduce function hali hazırdaki bir obj nin üzerine ekleme yapmak istiyorsan kullanılabilir
 const totalYears = inventors.reduce((total, inventor) => {
   return total + (inventor.passed - inventor.year);
 }, 0);
 
 console.log(totalYears);
 
-//sort function içindeki değerleri işleme alıp sonuç çıkarma
+//sort function içindeki değerleri bir değişken içerisinde işleyip yeni bir değişken ile sonuc çıkarma
 const oldest = inventors.sort((a, b) => {
   const lastInventor = a.passed - a.year;
   const nextInventor = b.passed - b.year;
@@ -93,7 +93,7 @@ const oldest = inventors.sort((a, b) => {
 
 console.table(oldest);
 
-//map filter ortak kullanım
+// map filter ortak kullanım
 // const category = document.querySelector(".mw-category");
 // const links = Array.from(category.querySelectorAll("a"));
 // const de = links
